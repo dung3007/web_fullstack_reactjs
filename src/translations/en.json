@@ -1,0 +1,69 @@
+{
+    "home-header": {
+        "speciality": "Medicial specialty",
+        "search-doctor": "Find a doctor by specialty",
+        "healthy-facility": "Healthy facilities",
+        "select-room": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Checkup package",
+        "check-healthy": "General health check",
+        "support": "Support",
+        "welcome": "Welcome"
+    },
+
+    "banner": {
+        "title1": "MEDICIAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "child1": "Specialized examination",
+        "child2": "Remote examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental examination"
+    },
+
+    "menu": {
+        "admin" : {
+            "manage-user": "Users System",
+            "manage-doctor": "Manager doctors",
+            "manage-admin": "Manager admins",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Clinics",
+            "manage-clinic": "Manager clinics",
+            "specialty": "Specialyies",
+            "manage-specialty": "Manager specialyies",
+            "handbook": "Handbooks",
+            "manage-handbook": "Manager handbooks"
+        },
+        "doctor": {
+            "manage-schedule": "Manage Doctor's Schedule"
+        }
+    },
+    "manage-user": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "image": "Avatar",
+        "save": "Save user",
+        "edit": "Save changes"
+    },
+    "home-page": {
+        "outstanding-doctor": "Last week's features doctor",
+        "more-infor": "More infor"
+    },
+    "manage-schedule": {
+        "title": "Manage doctor's examination plan",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save infor"
+    }
+}
