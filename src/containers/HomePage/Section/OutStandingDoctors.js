@@ -28,7 +28,9 @@ class OutStandingDoctors extends Component {
     }
 
     handleViewDetailDoctor = (doctor) => {
-        this.props.history.push(`/detail-doctor/${doctor.id}`)
+        if (this.props.history) {
+            this.props.history.push(`/detail-doctor/${doctor.id}`)
+        }
     }
 
     
@@ -65,7 +67,7 @@ class OutStandingDoctors extends Component {
                                         <div key={index} style={{width: '200px'}} className="img-customize" onClick={() => this.handleViewDetailDoctor(item)}>
                                             <div style={{border: '1px solid #ffffff', padding: '20px'}}>
                                                 <div className="outer-bg" style={{display: 'flex', justifyContent: 'center'}}>
-                                                    <div style={{width: '120px', height: '120px', borderRadius: '50%', backgroundImage: `url(${imgBase64})`, backgroundSize: 'contain'}}/>
+                                                    <div style={{width: '120px', height: '120px', borderRadius: '50%', backgroundImage: `url(${imgBase64})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat'}}/>
                                                 </div>
                                                 <div className="position text-center">
                                                     <div>{language === LANGUAGE.VI ? nameVi : nameEn}</div>

@@ -1,6 +1,7 @@
 import actionTypes from './actionTypes';
-import { createNewUserService, deleteUserService, editUserService, getAllCodeService, getAllDoctorService, getAllUsers, getTopDoctorService, saveDetailDoctorSevice } from '../../services/userService';
+import { createNewUserService, deleteUserService, editUserService, getAllClinic, getAllCodeService, getAllDoctorService, getAllUsers, getTopDoctorService, saveDetailDoctorSevice } from '../../services/userService';
 import { toast } from 'react-toastify';
+import { getAllSpecialty } from '../../services/userService';
 
 export const fetchGenderStart = () => {
     return async (dispatch, getState) => {
@@ -154,6 +155,57 @@ export const fetchProvinceSuccess = (provinceData) => ({
 export const fetchProvinceFailded = () => ({
     type: actionTypes.FETCH_PROVINCE_FAILED
 })
+
+export const fetchAllSpecialty = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllSpecialty()
+            if (res && res.errCode === 0) {
+                dispatch(fetchAllSpecialtySuccess(res.data))
+            } else {
+                dispatch(fetchAllSpecialtyFailded())
+            }
+        } catch (e) {
+            dispatch(fetchAllSpecialtyFailded())
+            console.log(e)
+        }
+    }
+}
+
+export const fetchAllSpecialtySuccess = (specialtyData) => ({
+    type: actionTypes.FETCH_ALL_SPECIALTY_SUCCESS,
+    data: specialtyData
+})
+
+export const fetchAllSpecialtyFailded = () => ({
+    type: actionTypes.FETCH_ALL_SPECIALTY_FAILED
+})
+
+export const fetchAllClinic = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllClinic()
+            if (res && res.errCode === 0) {
+                dispatch(fetchAllClinicSuccess(res.data))
+            } else {
+                dispatch(fetchAllClinicFailded())
+            }
+        } catch (e) {
+            dispatch(fetchAllClinicFailded())
+            console.log(e)
+        }
+    }
+}
+
+export const fetchAllClinicSuccess = (clinicData) => ({
+    type: actionTypes.FETCH_ALL_CLINIC_SUCCESS,
+    data: clinicData
+})
+
+export const fetchAllClinicFailded = () => ({
+    type: actionTypes.FETCH_ALL_CLINIC_FAILED
+})
+
 
 export const createNewUser = (data) => {
     return async (dispatch, getState) => {

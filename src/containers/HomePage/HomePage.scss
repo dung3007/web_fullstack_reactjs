@@ -106,4 +106,20 @@
             text-decoration: none;
         }
     }
+    .specialty-child {
+        .specialty-name {
+            padding: 10px 0;
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+    .clinic-child {
+        .clinic-name {
+            padding: 10px 0;
+            &:hover {
+                color: blue;
+            }
+        }
+    }
 }

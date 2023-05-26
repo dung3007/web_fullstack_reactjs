@@ -63,9 +63,47 @@ const postPatientBookingAppointment = (data) => {
     return axios.post(`/api/patient-book-appointment`, data)
 }
 
+const postVerifyBookAppointment = (data) => {
+    return axios.post(`/api/verify-book-appointment`, data)
+}
+
+const createNewSpecialty = (data) => {
+    return axios.post(`/api/create-new-specialty`, data)
+}
+
+const getAllSpecialty = () => {
+    return axios.get(`/api/get-all-specialty`)
+}
+
+const getDetailSpecialtyById = (data) => {
+    return axios.get(`/api/detail-specialty-by-id?id=${data.specialtyId}&location=${data.location}`)
+}
+
+const createNewClinic = (data) => {
+    return axios.post(`/api/create-new-clinic`, data)
+}
+
+const getAllClinic = () => {
+    return axios.get(`/api/get-all-clinic`)
+}
+
+const getDetailClincById = (clinicId) => {
+    return axios.get(`/api/detail-clinic-by-id?id=${clinicId}`)
+}
+
+const getListPatientForDoctor = (data) => {
+    return axios.get(`/api/get-list-patient-for-doctor?doctorId=${data.doctorId}&date=${data.date}`)
+}
+
+const sendRemedy = (data) => {
+    return axios.post(`/api/send-remedy`, data)
+}
+
 export { 
     handleLogin, getAllUsers, createNewUserService, deleteUserService, editUserService, 
     getAllCodeService, getTopDoctorService, getAllDoctorService, saveDetailDoctorSevice, 
     getDetailInforDoctor, saveBulkScheduleDoctor, getScheduleDoctorByDate, getExtraInforDoctorById,
-    getProfileDoctorById, postPatientBookingAppointment
+    getProfileDoctorById, postPatientBookingAppointment, postVerifyBookAppointment,
+    createNewSpecialty, getAllSpecialty, getDetailSpecialtyById, createNewClinic, getAllClinic, getDetailClincById, getListPatientForDoctor,
+    sendRemedy
 }

@@ -8,6 +8,8 @@ const initialState = {
     prices: [],
     payments: [],
     provinces: [],
+    specialties: [],
+    clinics: [],
     users: [],
     topDoctors: [],
     allDoctors: [],
@@ -83,6 +85,26 @@ const adminReducer = (state = initialState, action) => {
             }
         case actionTypes.FETCH_PROVINCE_FAILED:
             state.provinces = []
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_ALL_SPECIALTY_SUCCESS:
+            state.specialties = action.data
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_ALL_SPECIALTY_FAILED:
+            state.specialties = []
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_ALL_CLINIC_SUCCESS:
+            state.clinics = action.data
+            return {
+                ...state
+            }
+        case actionTypes.FETCH_ALL_CLINIC_FAILED:
+            state.clinics = []
             return {
                 ...state
             }

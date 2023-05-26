@@ -130,7 +130,8 @@ class BookingModal extends Component {
             reason: this.state.reason,
             doctorId: this.state.doctorId,
             selectedGender: this.state.selectedGender.value,
-            date: date,
+            birthday: date,
+            date: this.props.dataScheduleTimeModal.date,
             timeType: this.state.timeType,
             language: this.props.language,
             timeString: timeString,
@@ -161,6 +162,7 @@ class BookingModal extends Component {
                                         doctorId={dataScheduleTimeModal && !_.isEmpty(dataScheduleTimeModal) ? dataScheduleTimeModal.doctorId : ''}
                                         isShowDescriptionDoctor={false}
                                         dataScheduleTimeModal={dataScheduleTimeModal}
+                                        isShowPrice={true}
                                     />
                                 </div>
                             </div>
